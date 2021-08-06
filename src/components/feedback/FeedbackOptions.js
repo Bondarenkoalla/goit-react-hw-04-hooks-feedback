@@ -18,12 +18,13 @@ import styles from "./Feedback.module.css";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <>
-    {options.map((option) => (
+    {options.map((option, idx) => (
       <button
         className={styles.button}
         type="button"
-        onClick={() => onLeaveFeedback(option)}
+        name={option}
         key={option}
+        onClick={onLeaveFeedback}
       >
         {option}
       </button>
